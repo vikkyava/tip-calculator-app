@@ -51,21 +51,53 @@ body {
   margin: auto;
 }
 
-.main-bill-ctn {
-  margin-top: 25px;
+.input-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: px;
+  height: 20px;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 5px;
+  background: var(--Very-light-grayish-cyan);
+  cursor: pointer;
 }
 
+.input-wrapper:hover {
+  border: 2px solid var(--Strong-cyan);
+}
+
+.input-field {
+  border: none;
+  outline: none;
+  width: 170px;
+  font-size: 25px;
+  font-family: 'Space Mono', monospace;
+  background: var(--Very-light-grayish-cyan);
+  letter-spacing: 0.08em;
+  color: var(--Very-dark-cyan);
+}
+
+.main-bill {
+  width: 300px;
+  margin: 30px;
+  height: 20px;
+}
+
+.main-bill-ctn {
+margin-top: 40px;
+}
 .bill {
   color: var(--Grayish-cyan);
 }
 
+/*
 .bill-ctn {
   background: var(--Very-light-grayish-cyan);
   height: 40px;
   min-width: 250px;
   width: 300px;
   margin-top: 5px;
-  border-radius: 3px;
 }
 
 .amount-ctn {
@@ -75,8 +107,14 @@ body {
   padding: 3px 10px;
   font-size: 23px;
   font-weight: bold;
+  border-radius: 5px;
   color: var(--Very-dark-cyan);
+  cursor: pointer;
 }
+
+.amount-ctn:hover {
+  border: 2px solid var(--Strong-cyan);
+} */
 
 .tip-ctn {
   min-width: 250px;
@@ -105,6 +143,7 @@ body {
   background-color: var(--Very-dark-cyan);
   border-radius: 8px;
   color: var(--White);
+  cursor: pointer;
 }
 
 .list-item:hover {
@@ -116,7 +155,7 @@ body {
   min-width: 250px;
   width: 300px;
   height: 250px;
-  margin-top: 30px;
+  margin-top: 50px;
   margin-bottom: 30px;
   border-radius: 10px;
   background: var(--Very-dark-cyan);
@@ -146,4 +185,5 @@ body {
   color: var(--Very-dark-cyan);
   border: none;
   border-radius: 5px;
+  cursor: pointer;
 }

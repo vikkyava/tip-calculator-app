@@ -1,15 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 
-export default function NumberCount() {
-    return(
-        <div className="main-bill-ctn">
-            <p className="bill">No of People</p>
-            <div className="bill-ctn">
-                <div className="amount-ctn">
-                    <img src="./src/images/icon-person.svg"/>
-                    <div className="bill-amount">0</div>
-                </div>
-            </div>
-        </div>
+const NumberCount = () => {
+    const [amount, setAmount] = useState("");
+  
+    const handleChange = (event) => {
+      setAmount(event.target.value);
+    };
+  
+    return (
+      <div className="main-bill">
+          <p className="bill">No of People</p>
+          <div className="input-wrapper">
+              <span><img src="./src/images/icon-people.svg"/></span>
+              <input
+                  type="text"
+                  className="input-field"
+                  placeholder="0"
+                  value={amount}
+                  onChange={handleChange}
+                  style={{ textAlign: "right" }}
+              />
+          </div>
+      </div>
     );
-}
+  };
+  
+  export default NumberCount;
