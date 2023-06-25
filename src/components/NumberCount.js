@@ -2,7 +2,7 @@ import React from "react";
 
 const NumberCount = ({handlePersonChange, person, tip, reset}) => {
   const styles = {
-    border: person ? "none" : "1px solid red",
+    border: person > 0 ? "none" : "1px solid red",
   };
     return (
       <div className="main-bill">
