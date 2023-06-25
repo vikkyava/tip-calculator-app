@@ -1,24 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
 
-const NumberCount = () => {
-    const [amount, setAmount] = useState("");
-  
-    const handleChange = (event) => {
-      setAmount(event.target.value);
-    };
-  
+const NumberCount = ({handlePersonChange, person, tip, reset}) => {
+  const styles = {
+    border: person ? "none" : "1px solid red",
+  };
     return (
       <div className="main-bill">
-          <p className="bill">No of People</p>
-          <div className="input-wrapper">
-              <span><img src="./src/images/icon-people.svg"/></span>
+          {(person > 0 || tip === 0) && reset ? (
+            <p className="bill">Number of People</p>
+          ) : (<p className="bill" id="number-error">Can't be zero</p>
+          )}
+          <div className="input-wrapper" style={styles}>
+              <span><img src="./images/icon-person.svg" alt=""/></span>
               <input
                   type="text"
                   className="input-field"
                   placeholder="0"
-                  value={amount}
-                  onChange={handleChange}
-                  style={{ textAlign: "right" }}
+                  required
+                  value={person}
+                  onChange={handlePersonChange}
               />
           </div>
       </div>
