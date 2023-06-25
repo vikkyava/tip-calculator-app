@@ -13,7 +13,7 @@
 }
 
 body {
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   background: var(--Light-grayish-cyan);
 }
 
@@ -21,42 +21,36 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 8em;
+  text-align: center;
+  height: 10em;
   color: var(--Dark-grayish-cyan);
   font-size: 15px;
 }
 
 .header {
-  width: 25%;
+  width: 21%;
   line-height: 2em;
   letter-spacing: 0.5em;
 }
 
-.next {
-  background: red;
-}
-
 .container {
-  height: 100vh;
   background: var(--White);
   border-radius: 25px 25px 0 0;
+  height: 100vh;
 }
 
 .inner-ctn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 300px;
-  height: 100vh; 
+  width: 300px;
   margin: auto;
+  padding: 30px 0;
 }
 
 .input-wrapper {
   display: flex;
   justify-content: space-between;
-  width: px;
   height: 20px;
   margin: 10px auto;
+  margin-bottom: 0;
   padding: 10px;
   border-radius: 5px;
   background: var(--Very-light-grayish-cyan);
@@ -72,91 +66,74 @@ body {
   outline: none;
   width: 170px;
   font-size: 25px;
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   background: var(--Very-light-grayish-cyan);
+  text-align: right;
   letter-spacing: 0.08em;
-  color: var(--Very-dark-cyan);
-}
-
-.main-bill {
-  width: 300px;
-  margin: 30px;
-  height: 20px;
-}
-
-.main-bill-ctn {
-margin-top: 40px;
-}
-.bill {
-  color: var(--Grayish-cyan);
-}
-
-/*
-.bill-ctn {
-  background: var(--Very-light-grayish-cyan);
-  height: 40px;
-  min-width: 250px;
-  width: 300px;
-  margin-top: 5px;
-}
-
-.amount-ctn {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 3px 10px;
-  font-size: 23px;
-  font-weight: bold;
-  border-radius: 5px;
   color: var(--Very-dark-cyan);
   cursor: pointer;
 }
 
-.amount-ctn:hover {
-  border: 2px solid var(--Strong-cyan);
-} */
+.bill {
+  color: var(--Grayish-cyan);
+}
 
-.tip-ctn {
-  min-width: 250px;
-  width: 300px;
+.main-bill-ctn {
+  margin: 1.5rem auto;
+}
+
+#number-error {
+  color: red;
+  text-align: right;
 }
 
 .tip-header {
-  margin-bottom: 10px;
+  margin-bottom: 13px;
+  margin-top: 13px;
   color: var(--Grayish-cyan);
 }
 
 .tip-percent-list {
-  list-style-type: none;
-  padding: 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
   gap: 15px;
 }
 
 .list-item {
-  width: 120px;
+  width: 130px;
   text-align: center;
   padding: 10px;
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: bold;
   background-color: var(--Very-dark-cyan);
-  border-radius: 8px;
+  border: none;
+  border-radius: 5px;
   color: var(--White);
   cursor: pointer;
 }
 
-.list-item:hover {
+.list-item:focus {
   background: var(--Strong-cyan);
   color: var(--Very-dark-cyan);
 }
 
+#item {
+  width: 111px;
+  text-align: right;
+  font-size: 23px;
+  font-weight: bold;
+  color: var(--Very-dark-cyan);
+  background: var(--Very-light-grayish-cyan);
+  outline: none;
+  border: none;
+}
+
 .footer-ctn {
   min-width: 250px;
-  width: 300px;
   height: 250px;
-  margin-top: 50px;
-  margin-bottom: 30px;
+  margin-top: 30px;
   border-radius: 10px;
   background: var(--Very-dark-cyan);
 }
@@ -169,8 +146,12 @@ margin-top: 40px;
   color: var(--White);
 }
 
+.small {
+  color: var(--Grayish-cyan);
+}
+
 .tip-value {
-  font-size: 30px;
+  font-size: 23px;
   color: var(--Strong-cyan);
 }
 
@@ -186,4 +167,83 @@ margin-top: 40px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.reset-btn:hover {
+  background: var(--Light-grayish-cyan);
+}
+
+/********** MEDIA QUARIES **********/
+
+@media (min-width: 598px) and (max-width: 1440px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 680px;
+    height: 350px;
+    margin: auto;
+    border-radius: 10px;
+  }
+
+  .inner-ctn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 630px;
+    height: 250px;
+    margin: 0px;
+  }
+
+  .new-div {
+    max-width: 300px;
+    margin: 0;
+  }
+
+  .second-new-div {
+    width: 300px;
+  }
+
+  .main-bill {
+    font-size: 15px;
+  }
+
+  .main-bill-ctn {
+    font-size: 15px;
+  }
+
+  .input-wrapper {
+    height: 15px;
+  }
+
+  .input-field {
+    width: 170px;
+    font-size: 18px;
+  }
+
+  .tip-percent-list {
+    gap: 7px;
+  }
+
+  .list-item {
+    width: 95px;
+    font-size: 18px;
+  }
+
+  #item {
+    width: 75px;
+    font-size: 18px;
+  }
+
+  .footer-ctn {
+    height: 310px;
+    max-width: 300px;
+    margin: 0;
+  }
+
+  .reset-btn {
+    margin-top: 70px;
+  }
+
 }
